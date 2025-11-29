@@ -1,0 +1,934 @@
+/* ========== CSS Variables ========== */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-card: rgba(20, 20, 20, 0.7);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --border: rgba(255, 255, 255, 0.1);
+    --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --font-ar: 'Cairo', sans-serif;
+    --font-en: 'Inter', sans-serif;
+}
+
+/* Light Mode */
+:root[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --border: rgba(0, 0, 0, 0.1);
+    --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+/* Remove box-shadow for light mode */
+:root[data-theme="light"] .glass-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+:root[data-theme="light"] .skill-item:hover {
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+}
+
+/* ========== Reset & Base ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* منع السكرول تماماً */
+    font-family: var(--font-ar);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+html[lang="en"] {
+    font-family: var(--font-en);
+}
+
+/* ========== Animated Background ========== */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    z-index: -1;
+    animation: backgroundMove 15s ease-in-out infinite;
+}
+
+@keyframes backgroundMove {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* ========== Language Toggle ========== */
+.lang-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: var(--accent);
+}
+
+.lang-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.lang-text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ========== Theme Toggle ========== */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: var(--accent);
+    transform: rotate(180deg);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ========== Single Screen Container ========== */
+.single-screen-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* ========== Left Section (Profile) ========== */
+.left-section {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Profile Image */
+.profile-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+.profile-ring {
+    position: absolute;
+    inset: -3px;
+    background: var(--gradient-accent);
+    border-radius: 50%;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.profile-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-primary);
+}
+
+/* Name & Bio */
+.name {
+    font-size: 32px;
+    font-weight: 700;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.bio {
+    font-size: 16px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.job-title {
+    font-size: 14px;
+    color: var(--accent);
+    text-align: center;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* Info Card */
+.info-card {
+    display: flex;
+    gap: 25px;
+    padding: 20px 40px;
+    border-radius: 50px;
+}
+
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1; /* ياخد نفس المساحة */
+    flex-wrap: wrap;
+}
+
+.info-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.info-label,
+.info-prefix,
+.info-suffix {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.info-divider {
+    width: 2px;
+    background: var(--border);
+}
+
+/* Social Links - Compact */
+.social-links-compact {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ========== Right Section (Skills & Contact) ========== */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Skills */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill-item {
+    padding: 16px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60px;
+    cursor: default;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(59, 130, 246, 0.15);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.skill-item:hover::before {
+    left: 100%;
+}
+
+.skill-item span {
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact removed - no longer needed */
+
+/* ========== Responsive Design ========== */
+@media (max-width: 1200px) {
+    .single-screen-container {
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .profile-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    html, body {
+        overflow: hidden !important;
+    }
+
+    .single-screen-container {
+        flex-direction: row;
+        padding: 15px;
+        gap: 15px;
+        overflow: hidden;
+    }
+
+    .left-section {
+        flex: 0 0 40%;
+        gap: 8px;
+    }
+
+    .profile-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-ring {
+        inset: -2px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .bio {
+        font-size: 13px;
+    }
+
+    .info-card {
+        padding: 8px 16px;
+        gap: 12px;
+    }
+
+    .info-value {
+        font-size: 20px;
+    }
+
+    .info-label {
+        font-size: 11px;
+    }
+
+    .social-links-compact {
+        gap: 6px;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .right-section {
+        flex: 1;
+        gap: 12px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .skill-item {
+        padding: 12px 14px;
+        min-height: 50px;
+    }
+
+    .skill-item span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow: hidden !important;
+        height: 100vh;
+    }
+
+    .single-screen-container {
+        flex-direction: column;
+        padding: 40px 12px 10px 12px;
+        gap: 12px; /* مسافة متوسطة بين الأقسام */
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center; /* توسيط الكل */
+    }
+
+    .lang-toggle {
+        position: fixed !important;
+        top: 10px !important;
+        left: 10px !important;
+        right: auto !important;
+        padding: 6px 10px;
+        font-size: 13px;
+        width: auto;
+        max-width: fit-content;
+    }
+
+    html[dir="rtl"] .lang-toggle {
+        left: 10px !important;
+        right: auto !important;
+    }
+
+    html[dir="ltr"] .lang-toggle {
+        left: 10px !important;
+        right: auto !important;
+    }
+
+    .lang-toggle svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .theme-toggle {
+        position: fixed !important;
+        top: 10px !important;
+        right: 10px !important;
+        left: auto !important;
+        width: 38px;
+        height: 38px;
+    }
+
+    html[dir="rtl"] .theme-toggle {
+        right: 10px !important;
+        left: auto !important;
+    }
+
+    html[dir="ltr"] .theme-toggle {
+        right: 10px !important;
+        left: auto !important;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .left-section {
+        gap: 5px;
+        flex: none;
+        padding-bottom: 0;
+    }
+
+    .profile-wrapper {
+        width: 110px;
+        height: 110px;
+        margin: 0;
+    }
+
+    .profile-ring {
+        inset: -3px;
+    }
+
+    .profile-image {
+        border: 4px solid var(--bg-primary);
+    }
+
+    .name {
+        font-size: 26px;
+        margin: 0;
+    }
+
+    .bio {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .info-card {
+        padding: 8px 18px;
+        gap: 12px;
+        margin: 0;
+    }
+
+    .info-item {
+        text-align: center;
+    }
+
+    .info-value {
+        font-size: 22px;
+    }
+
+    .info-label {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .social-links-compact {
+        gap: 8px;
+        margin: 0;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .social-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .right-section {
+        gap: 0;
+        flex: none; /* مش flex: 1 عشان ميكبرش */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .skills-section {
+        margin: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .skill-item {
+        padding: 20px 10px; /* كبرنا أكتر */
+        min-height: 70px; /* أطول */
+    }
+
+    .skill-item span {
+        font-size: 15px; /* كبرنا الخط */
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        overflow: hidden !important;
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    .single-screen-container {
+        flex-direction: column;
+        padding: 35px 10px 8px 10px;
+        gap: 10px; /* مسافة متوسطة بين الأقسام */
+        overflow: hidden;
+        height: 100vh;
+        max-height: 100vh;
+        display: flex;
+        justify-content: center; /* توسيط الكل */
+    }
+
+    .lang-toggle {
+        top: 6px;
+        right: 6px;
+        left: auto;
+        padding: 5px 9px;
+        font-size: 12px;
+        width: auto;
+        max-width: fit-content;
+    }
+
+
+    .lang-toggle svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .lang-text {
+        font-size: 12px;
+    }
+
+    .left-section {
+        gap: 4px;
+        padding-top: 0;
+        padding-bottom: 0;
+        flex: none;
+    }
+
+    .profile-wrapper {
+        width: 95px;
+        height: 95px;
+        margin: 0;
+    }
+
+    .profile-ring {
+        inset: -2.5px;
+    }
+
+    .profile-image {
+        border: 3px solid var(--bg-primary);
+    }
+
+    .name {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .bio {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .info-card {
+        padding: 6px 14px;
+        gap: 8px;
+        margin: 0;
+    }
+
+    .info-item {
+        text-align: center;
+    }
+
+    .info-value {
+        font-size: 19px;
+    }
+
+    .info-label {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .info-divider {
+        height: 20px;
+    }
+
+    .social-links-compact {
+        gap: 6px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .social-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+    }
+
+    .social-icon svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .right-section {
+        gap: 0;
+        flex: none; /* مش flex: 1 عشان ميكبرش */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-section {
+        height: auto;
+        margin: 0;
+    }
+
+    .section-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .skill-item {
+        padding: 18px 6px; /* كبرنا أكتر */
+        min-height: 65px; /* أطول */
+        border-radius: 8px;
+    }
+
+    .skill-item span {
+        font-size: 13px; /* كبرنا الخط */
+        line-height: 1.3;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .profile-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .name {
+        font-size: 15px;
+    }
+
+    .bio {
+        font-size: 10px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .skill-item {
+        padding: 6px 3px;
+        min-height: 35px;
+    }
+
+    .skill-item span {
+        font-size: 9px;
+    }
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left-section,
+.right-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ========== About Button ========== */
+.about-btn {
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    border: 1px solid var(--border);
+}
+
+.about-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* ========== Modal ========== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--accent);
+}
+
+.modal-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.modal-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.modal-text {
+    color: var(--text-primary);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.modal-text p {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 10% auto;
+    }
+    
+    .modal-title {
+        font-size: 22px;
+    }
+    
+    .modal-subtitle {
+        font-size: 18px;
+    }
+}

@@ -1,29 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Ahmed Ayyad - Software Developer</title>
-    <meta property="og:title" content="Ahmed Ayyad - Software Developer" />
-    <meta property="og:description" content="Personal Portfolio of Ahmed Ayyad | Python Developer & Linux Enthusiast." />
-    <meta property="og:image" content="/profile.jpg" />
-    <meta property="og:type" content="website" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ahmed Ayyad - Software Developer" />
-    <meta name="twitter:description" content="Personal Portfolio of Ahmed Ayyad | Python Developer & Linux Enthusiast." />
-    <meta name="twitter:image" content="/profile.jpg" />
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- SEO Meta Tags -->
+    <title>Ahmed Ayyad - Python Developer & Linux Enthusiast | أحمد عياد</title>
+    <meta name="description" content="Ahmed Ayyad - Professional Python Developer & Linux Expert. Specializing in API Development, Web Scraping, Telegram Bots, Redis, and Debian Systems. Portfolio showcasing skills and projects.">
+    <meta name="keywords" content="Ahmed Ayyad, أحمد عياد, Python Developer, مطور بايثون, Linux Expert, FastAPI, Web Development, تطوير المواقع, Telegram Bots, Web Scraping, API Development, Redis, Debian, Backend Developer, Software Engineer">
+    <meta name="author" content="Ahmed Ayyad">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Arabic, English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="EG">
+    <meta name="geo.placename" content="Egypt">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmedayyad.dev/">
+    <meta property="og:site_name" content="Ahmed Ayyad Portfolio">
+    <meta property="og:title" content="Ahmed Ayyad - Python Developer & Linux Enthusiast">
+    <meta property="og:description" content="Professional Python Developer specializing in API Development, Web Scraping, Telegram Bots, and Linux Systems. Explore my skills and connect with me.">
+    <meta property="og:image" content="https://ahmedayyad.dev/profile.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ahmed Ayyad - Python Developer">
+    <meta property="og:locale" content="ar_EG">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ahmedayyad200">
+    <meta name="twitter:creator" content="@ahmedayyad200">
+    <meta name="twitter:url" content="https://ahmedayyad.dev/">
+    <meta name="twitter:title" content="Ahmed Ayyad - Python Developer & Linux Enthusiast">
+    <meta name="twitter:description" content="Professional Python Developer specializing in API Development, Web Scraping, Telegram Bots, and Linux Systems.">
+    <meta name="twitter:image" content="https://ahmedayyad.dev/profile.jpg">
+    <meta name="twitter:image:alt" content="Ahmed Ayyad Profile">
+
+    <!-- LinkedIn -->
+    <meta property="og:linkedin:profile" content="https://www.linkedin.com/in/ahmedayyad2/">
+
+    <!-- GitHub -->
+    <meta property="profile:username" content="ahmedayyad-dev">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ahmedayyad.dev/">
+
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="ar" href="https://ahmedayyad.dev/">
+    <link rel="alternate" hreflang="en" href="https://ahmedayyad.dev/">
+    <link rel="alternate" hreflang="x-default" href="https://ahmedayyad.dev/">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Added Cairo for Arabic support -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="assets/index-CEw7Tzhh.js"></script>
-    <link rel="stylesheet" crossorigin href="assets/index-viHgkcJ-.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=12.0">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmed Ayyad",
+        "alternateName": "أحمد عياد",
+        "url": "https://ahmedayyad.dev",
+        "image": "https://ahmedayyad.dev/profile.jpg",
+        "jobTitle": "Python Developer & Linux Enthusiast",
+        "description": "Professional Python Developer specializing in API Development, Web Scraping, Telegram Bots, Redis, and Debian Systems",
+        "email": "ahmedyad200@gmail.com",
+        "nationality": "Egyptian",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "EG"
+        },
+        "sameAs": [
+            "https://github.com/ahmedayyad-dev",
+            "https://www.linkedin.com/in/ahmedayyad2/",
+            "https://www.facebook.com/ahmedyad200",
+            "https://t.me/ayyad",
+            "https://wa.me/201068159910"
+        ],
+        "knowsAbout": [
+            "Python Programming",
+            "API Development",
+            "FastAPI",
+            "Web Scraping",
+            "Scrapy",
+            "Telegram Bots",
+            "Redis",
+            "Debian Linux",
+            "Backend Development",
+            "Software Engineering"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Software Development"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ahmed Ayyad Portfolio",
+        "alternateName": "أحمد عياد",
+        "url": "https://ahmedayyad.dev",
+        "description": "Professional portfolio showcasing Python development, Linux expertise, and software engineering skills",
+        "inLanguage": ["ar", "en"],
+        "author": {
+            "@type": "Person",
+            "name": "Ahmed Ayyad"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Ahmed Ayyad",
+            "alternateName": "أحمد عياد",
+            "identifier": "ahmedayyad-dev",
+            "description": "Python Developer & Linux Enthusiast",
+            "image": "https://ahmedayyad.dev/profile.jpg",
+            "sameAs": [
+                "https://github.com/ahmedayyad-dev",
+                "https://www.linkedin.com/in/ahmedayyad2/"
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation"></div>
+
+    <!-- Language Toggle -->
+    <button id="lang-toggle" class="lang-toggle" aria-label="Toggle Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">English</span>
+    </button>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Main Container - Single Screen -->
+    <div class="single-screen-container">
+        <!-- Left Side: Profile & Info -->
+        <div class="left-section">
+            <div class="profile-wrapper">
+                <div class="profile-ring"></div>
+                <img src="profile.jpg" alt="Ahmed Ayyad" class="profile-image">
+            </div>
+
+            <h1 class="name" data-ar="أحمد عياد" data-en="Ahmed Ayyad">أحمد عياد</h1>
+            <p class="bio" data-ar="لا يمكنك أن تكون مثلي" data-en="You can't be like me">لا يمكنك أن تكون مثلي</p>
+            <p class="job-title" data-ar="مطور سوفت وير" data-en="Software Developer">مطور سوفت وير</p>
+
+            <button id="about-btn" class="about-btn glass-card" data-ar="عني" data-en="About Me">عني</button>
+
+            <div class="info-card glass-card">
+                <div class="info-item">
+                    <span class="info-label" data-ar="سنين خبرة" data-en="Years Exp">سنين خبرة</span>
+                    <span id="experience" class="info-value">0</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                    <span class="info-prefix" data-ar="عمري" data-en="I'm">عمري</span>
+                    <span id="age" class="info-value">0</span>
+                    <span class="info-suffix" data-ar="سنة" data-en="Years Old">سنة</span>
+                </div>
+            </div>
+
+            <!-- Social Links - Compact -->
+            <div class="social-links-compact">
+                <a href="mailto:ahmedyad200@gmail.com" class="social-icon" title="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/ahmedayyad-dev" class="social-icon" title="GitHub" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/ahmedayyad2/" class="social-icon" title="LinkedIn" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="tel:+201068159910" class="social-icon" title="Phone">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/201068159910" class="social-icon" title="WhatsApp" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                </a>
+                <a href="https://t.me/ayyad" class="social-icon" title="Telegram" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/ahmedyad200" class="social-icon" title="Facebook" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://rapidapi.com/user/ahmedyad200" class="social-icon" title="RapidAPI" target="_blank">
+                    <svg viewBox="0 0 150 150" fill="currentColor">
+                        <path d="M100.38,97.16c-1.19-.37-1.28-2.02,.09-2.57,23.67-11.19,22.11-36.6,22.11-36.6-.09-25.78-18.99-49.63-49.44-49.44-33.94,.18-54.31,26.88-54.12,58.43,.28,55.22,42.47,76.32,55.59,76.23l-.09-21.93c0-3.49,0-6.24,2.11-6.24,0,0,13.58,13.58,28.62,13.58,23.48-.09,31.47-19.81,31.47-19.81l-36.33-11.65Zm-27.15-16.88c-12.02,.09-21.74-9.63-21.83-21.65-.09-12.02,9.63-21.74,21.65-21.83,12.02-.09,21.74,9.63,21.83,21.65,0,12.02-9.72,21.74-21.65,21.83Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Skills Only -->
+        <div class="right-section">
+            <!-- Skills - Grid -->
+            <div class="skills-section">
+                <h2 class="section-title" data-ar="المهارات" data-en="Skills">المهارات</h2>
+                <div class="skills-grid">
+                    <div class="skill-item glass-card">
+                        <span data-ar="بايثون" data-en="Python">بايثون</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="FastAPI" data-en="FastAPI">FastAPI</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="REST APIs" data-en="REST APIs">REST APIs</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="ديبيان (لينكس)" data-en="Debian (Linux)">ديبيان (لينكس)</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="ريديس" data-en="Redis">ريديس</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="البرمجة غير المتزامنة" data-en="Async Programming">البرمجة غير المتزامنة</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="أدوات الذكاء الاصطناعي" data-en="AI Tools">أدوات الذكاء الاصطناعي</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="الأتمتة" data-en="Automation">الأتمتة</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="Telethon" data-en="Telethon">Telethon</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="Py-TgCalls" data-en="Py-TgCalls">Py-TgCalls</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="yt-dlp" data-en="yt-dlp">yt-dlp</span>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span data-ar="Playwright" data-en="Playwright">Playwright</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title" data-ar="🌟 من أنا؟" data-en="🌟 Who Am I?">🌟 من أنا؟</h2>
+            <div class="modal-text">
+                <p data-ar="أنا أحمد عياد، مطور برمجيات مستقل وشغوف بحلول الـ Backend المعتمدة على Python." data-en="I'm Ahmed Ayyad, a freelance software developer passionate about Python-based Backend solutions.">أنا أحمد عياد، مطور برمجيات مستقل وشغوف بحلول الـ Backend المعتمدة على Python.</p>
+                <p data-ar="تخصصي يكمن في بناء أنظمة الأتمتة المعقدة، وأركز حالياً بشكل كبير على تطوير بوتات Telegram عالية الكفاءة؛ وتحديداً بوتات التحميل من YouTube وبوتات تشغيل الوسائط، بالإضافة إلى التعامل الاحترافي مع دمج الـ APIs المتنوعة." data-en="My specialty lies in building complex automation systems, currently focusing heavily on developing high-performance Telegram bots; specifically YouTube download bots and media playback bots, in addition to professional handling of various API integrations.">تخصصي يكمن في بناء أنظمة الأتمتة المعقدة، وأركز حالياً بشكل كبير على تطوير بوتات Telegram عالية الكفاءة؛ وتحديداً بوتات التحميل من YouTube وبوتات تشغيل الوسائط، بالإضافة إلى التعامل الاحترافي مع دمج الـ APIs المتنوعة.</p>
+            </div>
+
+            <h3 class="modal-subtitle" data-ar="🐧 فلسفتي التقنية" data-en="🐧 My Technical Philosophy">🐧 فلسفتي التقنية</h3>
+            <div class="modal-text">
+                <p data-ar="أنا ملتزم تمامًا بالاعتماد على الأنظمة مفتوحة المصدر والبيئات التقنية المستقلة." data-en="I am fully committed to relying on open-source systems and independent technical environments.">أنا ملتزم تمامًا بالاعتماد على الأنظمة مفتوحة المصدر والبيئات التقنية المستقلة.</p>
+                <p><strong><span data-ar="Linux أولاً وأخيراً:" data-en="Linux First and Last:">Linux أولاً وأخيراً:</span></strong> <span data-ar="أنا مستخدم عميق ومتعصب لنظام Linux (Debian)، وهذا الالتزام نابع من قناعتي بالاستقلالية التقنية والكفاءة العالية. هذا المنهج قوي لدرجة أنني لا أستخدم نظام التشغيل Windows على أي من أجهزتي الخاصة." data-en="I am a deep and devoted Linux (Debian) user, and this commitment stems from my conviction in technical independence and high efficiency. This approach is so strong that I don't use Windows on any of my personal devices.">أنا مستخدم عميق ومتعصب لنظام Linux (Debian)، وهذا الالتزام نابع من قناعتي بالاستقلالية التقنية والكفاءة العالية. هذا المنهج قوي لدرجة أنني لا أستخدم نظام التشغيل Windows على أي من أجهزتي الخاصة.</span></p>
+                <p><strong><span data-ar="قيادة المشروع:" data-en="Project Leadership:">قيادة المشروع:</span></strong> <span data-ar="تتطلب مسيرتي كمطور مستقل قيادة ذاتية كاملة للمشاريع، بدءاً من التصميم وحتى الإطلاق. هذه المهارة تضمن تنفيذًا فعالاً ومنضبطًا لأي مهمة تقنية." data-en="My career as a freelance developer requires complete self-management of projects, from design to launch. This skill ensures efficient and disciplined execution of any technical task.">تتطلب مسيرتي كمطور مستقل قيادة ذاتية كاملة للمشاريع، بدءاً من التصميم وحتى الإطلاق. هذه المهارة تضمن تنفيذًا فعالاً ومنضبطًا لأي مهمة تقنية.</span></p>
+            </div>
+
+            <h3 class="modal-subtitle" data-ar="🏡 نمط الحياة" data-en="🏡 Lifestyle & Focus">🏡 نمط الحياة</h3>
+            <div class="modal-text">
+                <p><strong><span data-ar="الاستقلالية والتركيز:" data-en="Independence and Focus:">الاستقلالية والتركيز:</span></strong> <span data-ar="أعمل وأعيش بشكل مستقل، مما يمنحني الانضباط والقدرة على التركيز العميق الذي ينعكس مباشرة على جودة الكود والأداء النهائي للخدمات التي أقدمها." data-en="I work and live independently, which gives me the discipline and ability to focus deeply, directly reflected in code quality and final service performance.">أعمل وأعيش بشكل مستقل، مما يمنحني الانضباط والقدرة على التركيز العميق الذي ينعكس مباشرة على جودة الكود والأداء النهائي للخدمات التي أقدمها.</span></p>
+                <p><strong><span data-ar="الذوق والإلهام:" data-en="Taste and Inspiration:">الذوق والإلهام:</span></strong> <span data-ar="أبحث عن البيئات السمعية التي تساعد على الإبداع؛ ولذلك لا أستمع إلى الأغاني الشعبية وأفضل الموسيقى التي تعزز الهدوء والتركيز أثناء العمل." data-en="I seek audio environments that aid creativity; therefore I don't listen to popular music and prefer music that enhances calm and focus while working.">أبحث عن البيئات السمعية التي تساعد على الإبداع؛ ولذلك لا أستمع إلى الأغاني الشعبية وأفضل الموسيقى التي تعزز الهدوء والتركيز أثناء العمل.</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
 </html>
